@@ -1,0 +1,15 @@
+.text
+
+main:
+    li       $t1, 1        # load immediate value 1 into $t1
+    add      $t0, $t1, 2   # $t1 + 2 and put result into $t0
+
+    li       $v0, 10       # 10 is the the exit syscall num
+    syscall
+
+
+# spim
+# load "add.asm"
+# run
+# print $t1
+# => 3
