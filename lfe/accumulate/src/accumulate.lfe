@@ -3,4 +3,4 @@
 
 (defun accumulate
   ((_ []) [])
-  ((fun (cons head tail)) (cons (funcall fun head) (accumulate fun tail))))
+  ((func (cons head tail)) (cons (funcall func head) (accumulate func tail))))
