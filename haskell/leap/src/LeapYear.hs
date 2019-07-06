@@ -4,7 +4,7 @@ isLeapYear :: Integer -> Bool
 isLeapYear year =
     if rem year 4 == 0
         then
-            not (rem year 100 == 0)
+            rem year 100 /= 0
             || rem year 400 == 0
         else
             False
