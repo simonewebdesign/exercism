@@ -9,7 +9,5 @@ defmodule LanguageList do
 
   def count(list), do: length(list)
 
-  def functional_list?(list) do
-    Enum.any?(list, fn name -> name == "Elixir" end)
-  end
+  def functional_list?(list), do: "Elixir" in list
 end
