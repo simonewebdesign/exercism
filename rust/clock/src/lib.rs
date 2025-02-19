@@ -3,7 +3,7 @@ use std::fmt;
 const DAY: i64 = 24 * 60;
 const HOUR: i64 = 60;
 
-#[derive(Debug, Eq, PartialEq)]
+#[derive(Debug, PartialEq)]
 pub struct Clock {
     minutes: i64, 
 }
