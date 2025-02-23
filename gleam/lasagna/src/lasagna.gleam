@@ -1,4 +1,3 @@
-// Please define the expected_minutes_in_oven function
 pub fn expected_minutes_in_oven() -> Int {
   40
 }
