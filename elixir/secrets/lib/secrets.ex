@@ -12,21 +12,22 @@ defmodule Secrets do
   end
 
   def secret_divide(secret) do
-    fn x -> x / secret end
+    fn x -> div(x, secret) end
   end
 
   def secret_and(secret) do
-    fn x -> x && secret end
+    fn x -> Bitwise.band(x, secret) end
   end
 
   def secret_xor(secret) do
-    fn x -> x || secret end
+    fn x -> Bitwise.bxor(x, secret) end
   end
 
   def secret_combine(secret_function1, secret_function2) do
     fn x ->
-      secret_function1.(x)
-      secret_function2.(x)
+      x
+      |> secret_function1.()
+      |> secret_function2.()
     end
   end
 end
