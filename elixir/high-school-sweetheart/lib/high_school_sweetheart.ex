@@ -11,10 +11,10 @@ defmodule HighSchoolSweetheart do
   end
 
   def initials(full_name) do
-    full_name                 # "John Doe"
-    |> split                  # ["John", "Doe"]
-    |> Enum.map(&initial(&1)) # ["J.", "D."]
-    |> Enum.join(" ")         # "J. D."
+    full_name               # "John Doe"
+    |> split                # ["John", "Doe"]
+    |> Enum.map(&initial/1) # ["J.", "D."]
+    |> Enum.join(" ")       # "J. D."
   end
 
   def pair(full_name1, full_name2) do
